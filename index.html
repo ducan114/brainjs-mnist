@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brainjs MNIST</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas class="inputCanvas"></canvas>
+      <div class="training-controller">
+        <div>
+          <label for="traing-amount">Traning amount</label>
+          <input type="number" id="training-amount" min="0" max="1001" />
+        </div>
+        <div>
+          <label for="testing-amount">Testing amount</label>
+          <input type="number" id="testing-amount" min="0" max="1001" />
+        </div>
+        <button id="train">Train</button>
+      </div>
+
+      <div class="testing-controller">
+        <div>
+          <button id="btn-clear">Clear</button>
+          <button id="btn-predict">Predict</button>
+          <input type="number" readonly id="predict-label" />
+        </div>
+        <div>
+          <label for="label">Label</label>
+          <input type="number" id="label" max="9" min="0" step="1" />
+          <button id="get-input">Get random input</button>
+        </div>
+      </div>
+
+      <div class="informs">
+        <pre></pre>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mnist/1.0.4/mnist.js"
+      integrity="sha512-8rOuUIEom3mOHd8Wa/gsLsVIwKEbZDMDb4TCaunkVqcKZY8ogK4wrW4pt1Oafesy04IMil1IxwSO9LqPwLzLlQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/brain.js/2.0.0-beta.4/brain-browser.min.js"
+      integrity="sha512-lNfC3vgTaMQb1wZpnzvhq7EePYCQltqUOq0DxJrWzDNJOoKmpPPKQyGkbAoSArCpFfeLxXZ00iDnIg6titN3PQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

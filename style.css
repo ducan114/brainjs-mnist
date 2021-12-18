@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#app {
+  margin: 0 auto;
+  width: max-content;
+}
+
+.inputCanvas {
+  --baseSize: 28px;
+  --scale: 1;
+  background-color: black;
+  width: calc(var(--baseSize) * var(--scale));
+  height: calc(var(--baseSize) * var(--scale));
+}
